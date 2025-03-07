@@ -1,12 +1,12 @@
 ## AUTHOR SECTION
 
-## Type of Task
+## Type of Task:
 - [ ] New feature
 - [ ] Bug fix
 - [ ] Refactoring
 
 
-## 🖹 Description
+## 🖹 Description:
 - What was added/modified
 
 - Why the change was necessary
@@ -14,7 +14,7 @@
 - Any technical details worth noting
 
 
-## 🌟 Impac
+## 🌟 Impact:
 - **Performance**: Any performance implications
 
 - **Security**: Security-related impacts
@@ -39,12 +39,13 @@ Provide instructions so we can reproduce.
 Please also list any relevant details for your test configuration
 
 
-## 💥 Issues
+## 💥 Issues:
 Document any known issues, limitations, or pending concerns.
 
 
 
 ## REVIEWER SECTION
+
 - [ ] Looks Good - Merge
 - [ ] Need rework - Canot merge
 - [ ] Can merge - Need follow up task
