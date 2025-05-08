@@ -1,0 +1,28 @@
+name: Main Workflow Caller
+
+on:
+  schedule:
+      - cron: 0 0 * * *
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario Manual run'
+
+permissions:
+  contents: read
+
+# Call the Reusable Test Automation Workflow
+jobs:
+  call-workflow-test-automation:
+    uses:  qnovo/tool_test_automation/.github/workflows/test_automation.yml@dev/QVIS-319/anila/TAFV2.0.1
+    with:
+      # 'swc_repo' specifies the repository to be tested.
+      swc_repo: ${{ github.repository }}
+      tool_repo: 'qnovo/tool_test_automation'
+    secrets:
+      # The 'token' secret to be passed into the called workflow to provide authentication credentials.
+      token: ${{ secrets.TEST_AUTOMATION_PAT }}
